@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meeting Scheduler</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Meeting Scheduler</h1>
+  <textarea id="input-json" rows="10" cols="60" placeholder='Paste JSON like [{"id": "1", "slots": [["09:00", "10:00"]]}]'></textarea><br>
+  <button onclick="submitSlots()">Submit Slots</button>
+  <br><br>
+  <input type="number" id="duration" placeholder="Meeting duration (minutes)" value="30">
+  <button onclick="getSuggestions()">Suggest Slots</button>
+  <br><br>
+  <table border="1" id="suggestions">
+    <tr><th>Free Time Slot</th><th>Action</th></tr>
+  </table>
+  <br><hr>
+  <h3>User Calendar</h3>
+  <input type="text" id="calendar-user-id" placeholder="Enter User ID">
+  <button onclick="viewCalendar()">View Calendar</button>
+  <br><br>
+  <table border="1" id="calendar-table">
+    <tr><th>Time Range</th><th>Status</th></tr>
+  </table>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
